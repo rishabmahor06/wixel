@@ -12,7 +12,7 @@ form.addEventListener('submit', async (event) => {
   const data = { fullName, email, projectType, mobile, projectDetails };
 
   try {
-    const response = await fetch('https://wixel-backend-1.onrender.com/api/contact', {
+    const response = await fetch('https://wixel-backend.vercel.app/api/users', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
