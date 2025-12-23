@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Horizontal Scroll Timeline</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --bg-color: #000;
+        --card-bg: rgba(255, 255, 255, 0.05);
+        --card-border: rgba(255, 255, 255, 0.1);
+        --accent-glow: #ff4a17;
+        --accent-secondary: #ff8c42;
+        --text-secondary: #b0b0b0;
+        --transition-speed: 0.3s;
+      }
+
+      body {
+        font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+        background-color: var(--bg-color);
+        color: #fff;
+        overflow-x: hidden;
+      }
+
+      /* Demo sections before and after */
+      .demo-section {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+        background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+      }
+
+      .demo-section.after {
+        background: linear-gradient(135deg, #0f3460 0%, #16213e 100%);
+      }
+
+      /* Timeline Wrapper - Creates scroll distance */
+      .timeline-wrapper {
+        position: relative;
+        /* Height = viewport + (number of cards × card movement distance) */
+        height: 400vh; /* Adjust based on your needs */
+      }
+
+      /* Fixed Container */
+      .timeline-container {
+        position: sticky;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        background-color: #000;
+        align-items: center;
+        overflow: hidden;
+        padding: 0 10vw;
+        gap: 80px;
+      }
+
+      /* Inner scrolling container */
+      .timeline-track {
+        position: relative;
+        display: flex;
+        gap: 80px;
+        will-change: transform;
+        transition: transform 0.1s linear;
+      }
+
+      /* The Central Line */
+      .timeline-line {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(
+          90deg,
+          transparent 0%,
+          #ff4a17 20%,
+          #fff 40%,
+          #ff4a17 60%,
+          transparent 100%
+        );
+        z-index: 0;
+        transform: translateY(-50%);
+        pointer-events: none;
+      }
+
+      /* Timeline Item */
+      .timeline-item {
+        position: relative;
+        min-width: 320px;
+        max-width: 320px;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        flex-shrink: 0;
+      }
+
+      /* Stagger items */
+      .timeline-item:nth-child(even) {
+        transform: translateY(40px);
+      }
+      .timeline-item:nth-child(odd) {
+        transform: translateY(-40px);
+      }
+
+      /* The Dot */
+      .timeline-dot {
+        width: 16px;
+        height: 16px;
+        background-color: black;
+        border: 2px solid #ff4a17;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        box-shadow: 0 0 10px #ff3700;
+        transition: all var(--transition-speed) ease;
+        z-index: 2;
+      }
+
+      .timeline-item:nth-child(even) .timeline-dot {
+        top: -40px;
+      }
+      .timeline-item:nth-child(odd) .timeline-dot {
+        top: calc(100% + 40px);
+      }
+
+      /* The Content Card */
+      .timeline-content {
+        background: var(--card-bg);
+        border: 1px solid var(--card-border);
+        border-radius: 16px;
+        padding: 20px;
+        backdrop-filter: blur(10px);
+        transition: all var(--transition-speed) ease;
+        cursor: pointer;
+        overflow: hidden;
+      }
+
+      .image-wrapper {
+        width: 100%;
+        height: 200px;
+        border-radius: 8px;
+        overflow: hidden;
+        margin-bottom: 15px;
+        background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .image-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+      }
+
+      .timeline-content h3 {
+        font-size: 1.25rem;
+        margin-bottom: 8px;
+        background: linear-gradient(to right, #fff, #a5b4fc);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .timeline-content p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+        color: var(--text-secondary);
+      }
+
+      /* Hover Effects */
+      .timeline-item:hover .timeline-content {
+        transform: translateY(-5px) scale(1.02);
+        border-color: #ff4a17;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        background: rgba(255, 255, 255, 0.08);
+      }
+
+      .timeline-item:hover .image-wrapper img {
+        transform: scale(1.1);
+      }
+
+      .timeline-item:hover .timeline-dot {
+        background-color: #ff4a17;
+        box-shadow: 0 0 20px #ff4a17, 0 0 40px var(--accent-secondary);
+        transform: translate(-50%, -50%) scale(1.3);
+      }
+
+      /* Mobile Responsive */
+      @media (max-width: 900px) {
+        .timeline-wrapper {
+          height: auto;
+        }
+
+        .timeline-container {
+          position: relative;
+          flex-direction: column;
+          height: auto;
+          overflow: visible;
+          padding: 80px 20px;
+        }
+
+        .timeline-track {
+          flex-direction: column;
+          transform: none !important;
+        }
+
+        .timeline-line {
+          width: 2px;
+          height: 100%;
+          top: 0;
+          left: 30px;
+          transform: none;
+          background: linear-gradient(
+            180deg,
+            transparent 0%,
+            #ff4a17 20%,
+            #fff 40%,
+            #ff4a17 60%,
+            transparent 100%
+          );
+        }
+
+        .timeline-item {
+          min-width: 100%;
+          flex-direction: row;
+          margin-bottom: 40px;
+          padding-left: 50px;
+          transform: none !important;
+        }
+
+        .timeline-dot {
+          left: 30px;
+          top: 35px !important;
+          transform: translate(-50%, 0);
+        }
+
+        .timeline-item:hover .timeline-dot {
+          transform: translate(-50%, 0) scale(1.3);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Section Before Timeline -->
+    <section class="demo-section">
+      <h1>Scroll Down ↓</h1>
+    </section>
+
+    <!-- Timeline Wrapper (creates scroll distance) -->
+
+    <div class="timeline-wrapper">
+      <div class="timeline-container">
+        <div class="timeline-line"></div>
+        <div class="timeline-track" id="timelineTrack">
+          <article class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="image-wrapper">
+                <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
+                  <circle
+                    cx="40"
+                    cy="40"
+                    r="30"
+                    stroke="#ff4a17"
+                    stroke-width="2"
+                    fill="none"
+                  />
+                  <path
+                    d="M40 25 L40 40 L50 50"
+                    stroke="#ff4a17"
+                    stroke-width="2"
+                  />
+                </svg>
+              </div>
+              <h3>We Dig Deep</h3>
+              <p>
+                Every project kicks off with a thorough audit. We look at your
+                current performance, site structure, technical health, and
+                keyword opportunities.
+              </p>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="image-wrapper">
+                <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
+                  <rect
+                    x="25"
+                    y="25"
+                    width="30"
+                    height="30"
+                    stroke="#ff4a17"
+                    stroke-width="2"
+                    fill="none"
+                  />
+                  <line
+                    x1="40"
+                    y1="25"
+                    x2="40"
+                    y2="15"
+                    stroke="#ff4a17"
+                    stroke-width="2"
+                  />
+                </svg>
+              </div>
+              <h3>We Plot the Climb</h3>
+              <p>
+                Based on the data, we create a tailored SEO roadmap. This
+                outlines exactly how we'll help you rank and meet your business
+                goals.
+              </p>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="image-wrapper">
+                <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
+                  <polygon
+                    points="40,20 60,55 20,55"
+                    stroke="#ff4a17"
+                    stroke-width="2"
+                    fill="none"
+                  />
+                </svg>
+              </div>
+              <h3>We Fix the Foundation</h3>
+              <p>
+                From titles and tags to site speed and broken links — we clean
+                up the mess and strengthen your site so Google can rank it.
+              </p>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="image-wrapper">
+                <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
+                  <path
+                    d="M25 40 L35 30 L45 45 L55 35 L65 40"
+                    stroke="#ff4a17"
+                    stroke-width="2"
+                    fill="none"
+                  />
+                </svg>
+              </div>
+              <h3>We Write to Rank</h3>
+              <p>
+                Your content isn't just written. It's crafted to rank, read
+                well, and convert. Every piece gets the attention it deserves.
+              </p>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="image-wrapper">
+                <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
+                  <circle
+                    cx="40"
+                    cy="40"
+                    r="25"
+                    stroke="#ff4a17"
+                    stroke-width="2"
+                    fill="none"
+                  />
+                  <circle
+                    cx="40"
+                    cy="40"
+                    r="15"
+                    stroke="#ff4a17"
+                    stroke-width="2"
+                    fill="none"
+                  />
+                </svg>
+              </div>
+              <h3>We Build Your Reputation</h3>
+              <p>
+                We get your name out there with quality backlinks and signals
+                that tell search engines you're the real deal.
+              </p>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="image-wrapper">
+                <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
+                  <path
+                    d="M20 40 Q40 20 60 40 Q40 60 20 40"
+                    stroke="#ff4a17"
+                    stroke-width="2"
+                    fill="none"
+                  />
+                </svg>
+              </div>
+              <h3>We Watch, Learn, Repeat</h3>
+              <p>
+                We don't disappear after launch. We track, tweak, and report
+                regularly to keep you ahead of the competition.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section After Timeline -->
+    <section class="demo-section after">
+      <h1>Continue Scrolling ↓</h1>
+    </section>
+
+    <script>
+      // Horizontal scroll animation
+      const wrapper = document.querySelector(".timeline-wrapper");
+      const track = document.getElementById("timelineTrack");
+
+      function updateTimelineScroll() {
+        if (window.innerWidth <= 900) return; // Skip on mobile
+
+        const rect = wrapper.getBoundingClientRect();
+        const wrapperHeight = wrapper.offsetHeight;
+        const viewportHeight = window.innerHeight;
+
+        // Calculate scroll progress within the wrapper
+        // Works while scrolling up OR down through the section
+        if (rect.bottom > 0 && rect.top < viewportHeight) {
+          const scrollProgress =
+            Math.abs(rect.top) / (wrapperHeight - viewportHeight);
+
+          // Calculate total scrollable width
+          const trackWidth = track.scrollWidth;
+          const containerWidth = track.parentElement.offsetWidth;
+          const maxScroll = trackWidth - containerWidth;
+
+          // Apply transform
+          const translateX = -scrollProgress * maxScroll;
+          track.style.transform = `translateX(${translateX}px)`;
+        }
+      }
+
+      // Throttle scroll events for performance
+      let ticking = false;
+      window.addEventListener("scroll", () => {
+        if (!ticking) {
+          window.requestAnimationFrame(() => {
+            updateTimelineScroll();
+            ticking = false;
+          });
+          ticking = true;
+        }
+      });
+
+      // Initial call
+      updateTimelineScroll();
+    </script>
+  </body>
+</html>

@@ -20,6 +20,7 @@ form.addEventListener('submit', async (event) => {
       body: JSON.stringify(data),
     });
 
+
     if (response.ok) {
       form.reset();
       alert('Message sent successfully!');
@@ -39,3 +40,57 @@ form.addEventListener("keydown", function (e) {
     form.requestSubmit();
   }
 });
+
+
+
+
+
+// scroll to revel section start
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const pills = document.querySelectorAll(".pill");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.classList.add("reveal");
+          }, index * 120); // stagger animation
+        }
+      });
+    },
+    { threshold: 0.3 }
+  );
+
+  pills.forEach(pill => observer.observe(pill));
+});
+// scroll to revel section end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// timeline section start
+
+
+
+// Timeline Scroll Section
+
+
+
+// timeline section end
