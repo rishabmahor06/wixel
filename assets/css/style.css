@@ -9833,6 +9833,8 @@ padding: 20px 0px 0px;
 
 
 /* Section */
+
+
 .stack-section {
   position: relative;
 }
@@ -10010,4 +10012,148 @@ padding: 20px 0px 0px;
   line-height: 1.6;
   font-size: 15px;
 }
+
+
+
+/* ===============================
+   RESPONSIVE FIXES
+================================ */
+
+/* Large screens (below 1400px) */
+@media (max-width: 1400px) {
+  .stack-section-heading p {
+    padding: 0 180px;
+  }
+
+  .stack-card,
+  .portfolio-card {
+    width: 65vw;
+  }
+}
+
+/* Laptops / Tablets */
+@media (max-width: 1024px) {
+  .stack-section-heading {
+    position: relative;
+    top: 80px;
+    margin-bottom: 350px;
+  }
+
+  .stack-section-heading p {
+    font-size: 18px;
+    padding: 0 80px;
+  }
+
+  .stack-item {
+    height: 120vh;
+  }
+
+  .stack-card,
+  .portfolio-card {
+    width: 80vw;
+    height: auto;
+  }
+
+  .portfolio-top {
+    height: 65%;
+  }
+
+  .portfolio-bottom {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+  .stack-section-heading {
+    position: relative;
+    top: unset;
+    margin-bottom: 200px;
+  }
+
+  .stack-section-heading p {
+    font-size: 16px;
+    padding: 0 30px;
+  }
+
+  .stack-item {
+    height: auto;
+    padding: 80px 0;
+  }
+
+  .stack-card,
+  .portfolio-card {
+    width: 90vw;
+    height: auto;
+    border-radius: 22px;
+  }
+
+  .portfolio-top {
+    height: 260px;
+    padding: 14px;
+  }
+
+  .portfolio-overlay {
+    padding: 18px;
+  }
+
+  .portfolio-arrow {
+    width: 42px;
+    height: 42px;
+    font-size: 18px;
+  }
+
+  .portfolio-bottom h3 {
+    font-size: 20px;
+  }
+
+  .portfolio-bottom p {
+    font-size: 14px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .stack-section-heading p {
+    font-size: 15px;
+    padding: 0 16px;
+  }
+
+  .stack-card,
+  .portfolio-card {
+    width: 94vw;
+    border-radius: 18px;
+  }
+
+  .portfolio-top {
+    height: 220px;
+    padding: 12px;
+  }
+
+  .portfolio-tags span {
+    font-size: 11px;
+    padding: 2px 10px;
+  }
+
+  .portfolio-arrow {
+    width: 38px;
+    height: 38px;
+    font-size: 16px;
+  }
+
+  .portfolio-bottom {
+    padding: 14px;
+  }
+
+  .portfolio-bottom h3 {
+    font-size: 18px;
+  }
+
+  .portfolio-bottom p {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+}
+
 /* sticky card stack end */
