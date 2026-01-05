@@ -2089,7 +2089,7 @@ label {
 .cs-page_heading.cs-style1::after {
   content: "";
   position: absolute;
-  right: -30px;
+  right: 0px;
   top: -30px;
   height: 151px;
   width: 151px;
