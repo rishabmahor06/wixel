@@ -16,9 +16,12 @@
     <link rel="stylesheet" href="assets/css/plugin/lightgallery.min.css" />
     <link rel="stylesheet" href="assets/css/plugin/animate.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   </head>
   <body>
-    <!-- Start Header Section -->
+    <!-- header section start -->
     <header class="cs-site_header cs-style1 text-uppercase cs-sticky_header">
       <div class="cs-main_header">
         <div class="container">
@@ -406,674 +409,136 @@
         </div>
       </div>
     </div>
-    <!-- End Header Section -->
-    <!-- Start Hero -->
-    <div
-      class="cs-hero cs-style1 cs-bg cs-fixed_bg cs-shape_wrap_1"
-      data-src="assets/img/banner.jpg"
-      id="home"
-    >
-      <div class="cs-shape_1"></div>
-      <div class="cs-shape_1"></div>
-      <div class="cs-shape_1"></div>
-      <div class="container">
-        <div class="cs-hero_text">
-          <h1
-            class="cs-hero_title wow fadeInRight"
-            data-wow-duration="0.8s"
-            data-wow-delay="0.2s"
-          >
-            Creativity In <br />Our Blood Line
-          </h1>
-          <div class="cs-hero_info">
-            <div>
-              <a href="contact.html" class="cs-text_btn">
-                <span>Let's Get Started</span>
-                <svg
-                  width="26"
-                  height="12"
-                  viewBox="0 0 26 12"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M25.5303 6.53033C25.8232 6.23744 25.8232 5.76256 25.5303 5.46967L20.7574 0.696699C20.4645 0.403806 19.9896 0.403806 19.6967 0.696699C19.4038 0.989593 19.4038 1.46447 19.6967 1.75736L23.9393 6L19.6967 10.2426C19.4038 10.5355 19.4038 11.0104 19.6967 11.3033C19.9896 11.5962 20.4645 11.5962 20.7574 11.3033L25.5303 6.53033ZM0 6.75H25V5.25H0V6.75Z"
-                    fill="currentColor"
-                  />
-                </svg>
-              </a>
-            </div>
-            <div>
-              <div class="cs-hero_subtitle">
-                We don’t just offer services, we craft experiences, stir
-                curiosity, and build brands that stick.
-              </div>
-            </div>
-          </div>
+    <!-- header including side bar end -->
+
+    <!-- hero section start -->
+    <section class="seoHeroSection">
+      <!-- BACKGROUND VIDEO -->
+      <img
+        src="assets/img/branding_banner.webp"
+        alt="SEO Banner"
+        class="seoHeroBg"
+      />
+
+      <!-- OVERLAY -->
+      <div class="brandingHeroOverlay">
+        <div class="seoHeroInner">
+          <h1 class="seoHeroTitle">Search Engine Optimisation</h1>
+          <p>
+            Build a Brand That Actually Means Something Your logo is just the
+            beginning. We craft identities that stick, speak, and sell.
+          </p>
+
+          <a href="#contact" class="seoHeroButton"> Contact Us </a>
         </div>
       </div>
-      <!-- <div class="cs-hero_social_wrap cs-primary_font cs-primary_color">
-        <div class="cs-hero_social_title">Follow Us</div>
-        <ul class="cs-hero_social_links">
-          <li>
-            <a
-              href="https://www.instagram.com/AdertisYard_web?igsh=MWY5aHd0d3A1MHpuOQ%3D%3D"
-              target="_blank"
-              >Instagram</a
-            >
-          </li>
-          <li>
-            <a
-              href="https://www.facebook.com/people/AdertisYard/61561180424002/?mibextid=ZbWKwL"
-              target="_blank"
-              >Facebook</a
-            >
-          </li>
-        </ul>
-      </div> -->
-      <a href="#service" class="cs-down_btn"></a>
-    </div>
-    <!-- End Hero -->
 
-    <!-- Start FunFact -->
-    <section>
-      <div class="container">
-        <div class="cs-funfact_wrap cs-type1">
-          <div
-            class="cs-funfact_shape"
-            data-src="assets/img/funfact_shape_bg.svg"
-          ></div>
-          <div class="cs-funfact_left">
-            <div class="cs-funfact_heading">
-              <h2>Numbers That Define Our Success Story</h2>
+      <section class="seoValueSection">
+        <div class="seoValueContainer">
+          <div class="seoValueHeader">
+            <h2 class="seoValueTitle">
+              Branding Isn’t Just Design. It’s How You Make People Feel.
+            </h2>
+
+            <h3 class="seoValueSubtitle">
+              Good branding isn’t about slapping on a logo or choosing trendy
+              colors. It’s about shaping perception, building trust, and
+              creating an experience that people remember.
+            </h3>
+          </div>
+
+          <div class="seoValueContent">
+            <p>
+              Whether you’re starting fresh or refreshing your image, we help
+              you define who you are, what you stand for, and how you want the
+              world to see you. From visual identity to voice and vibe — we
+              bring your brand to life with purpose and precision.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="seoServicesSection">
+        <div class="seoServicesContainer">
+          <span class="seoServicesTag">Our Branding Services</span>
+
+          <h2 class="seoServicesHeading">
+            Branding Services That Build Real Connection
+          </h2>
+          <p>
+            We craft brands that don’t just look good — they mean something.
+            Whether you’re starting from scratch or reinventing your identity,
+            our services help you shape a brand that speaks clearly and
+            confidently to your audience.
+          </p>
+
+          <div class="seoServicesGrid">
+            <!-- CARD -->
+            <div class="seoServiceCard">
+              <div class="seoServiceIcon">⚙️</div>
+              <h3>Brand Strategy</h3>
               <p>
-                Every project, every campaign, and every satisfied client adds
-                to our journey. From crafting impactful websites to executing
-                data-driven strategies, our track record speaks volumes.
+                Define your brand’s voice, vision, and values. We map out how
+                you show up in the market and what sets you apart.
+              </p>
+            </div>
+
+            <div class="seoServiceCard">
+              <div class="seoServiceIcon">📍</div>
+              <h3>Logo Design & Style Guide</h3>
+              <p>
+                Get a logo that captures your essence, paired with a detailed
+                guide to keep your brand consistent across every platform.
+              </p>
+            </div>
+
+            <div class="seoServiceCard">
+              <div class="seoServiceIcon">📝</div>
+              <h3>Brand Naming</h3>
+              <p>
+                Find the perfect name that’s memorable, meaningful, and
+                market-ready — one that leaves a lasting impression.
+              </p>
+            </div>
+
+            <div class="seoServiceCard">
+              <div class="seoServiceIcon">🔗</div>
+              <h3>Brand Package Designs</h3>
+              <p>
+                From business cards to packaging, we create designs that bring
+                your brand identity to life in every detail.
+              </p>
+            </div>
+
+            <div class="seoServiceCard">
+              <div class="seoServiceIcon">🛒</div>
+              <h3>Professional Rebranding Services</h3>
+              <p>
+                Ready for a refresh? We help brands evolve without losing their
+                roots, with thoughtful, strategic rebranding.
+              </p>
+            </div>
+
+            <div class="seoServiceCard">
+              <div class="seoServiceIcon">📊</div>
+              <h3>SEO Reporting</h3>
+              <p>
+                No fluff, just facts. Get clear reports on rankings, traffic,
+                and performance so you know what’s working and where to grow.
               </p>
             </div>
           </div>
-          <div class="cs-funfact_right">
-            <div class="cs-funfacts">
-              <div class="cs-funfact cs-style1">
-                <div
-                  class="cs-funfact_number cs-primary_font cs-semi_bold cs-primary_color"
-                >
-                  <span data-count-to="55" class="odometer"></span>
-                </div>
-                <div class="cs-funfact_text">
-                  <span class="cs-accent_color">+</span>
-                  <p>Happy Clients</p>
-                </div>
-              </div>
-              <div class="cs-funfact cs-style1">
-                <div
-                  class="cs-funfact_number cs-primary_font cs-semi_bold cs-primary_color"
-                >
-                  <span data-count-to="67" class="odometer"></span>
-                </div>
-                <div class="cs-funfact_text">
-                  <span class="cs-accent_color">+</span>
-                  <p>Project Completed</p>
-                </div>
-              </div>
-              <div class="cs-funfact cs-style1">
-                <div
-                  class="cs-funfact_number cs-primary_font cs-semi_bold cs-primary_color"
-                >
-                  <span data-count-to="12" class="odometer"></span>
-                </div>
-                <div class="cs-funfact_text">
-                  <span class="cs-accent_color">+</span>
-                  <p>Team Members</p>
-                </div>
-              </div>
-              <div class="cs-funfact cs-style1">
-                <div
-                  class="cs-funfact_number cs-primary_font cs-semi_bold cs-primary_color"
-                >
-                  <span data-count-to="100" class="odometer"></span>
-                </div>
-                <div class="cs-funfact_text">
-                  <span class="cs-accent_color">+</span>
-                  <p>Creative Ads Designed</p>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
-    </section>
-    <!-- End FunFact -->
-    <!-- marqueee section start -->
+      </section>
 
-    <section class="design-section">
-      <div class="design-section-heading">
-        <h3>
-          Let's Create an
-          <span
-            >Amazing <br />
-            Project Together!</span
-          >
-        </h3>
-      </div>
-      <!-- Curved Pills -->
-      <div class="pill-arc">
-        <span class="pill dark p1">Design System</span>
-        <span class="pill green p2">Prototype</span>
-        <span class="pill dark p3">Wireframe Design</span>
-        <span class="pill green p4">Mobile App Design</span>
-        <span class="pill dark p5">Website Design</span>
-        <span class="pill green p6">Illustration</span>
+      <!-- TESTIMONIAL section start -->
 
-        <span class="pill green center-pill"
-          ><a href="contact.html">Contact Us</a></span
-        >
 
-        <span class="pill green p7">Brand Identity</span>
-        <span class="pill dark p8">UX/UI Design</span>
-        <span class="pill dark p13">Landing Page</span>
-        <span class="pill green p9">Dashboard</span>
-        <span class="pill dark p10">UI Design</span>
-        <span class="pill green p11">Product Design</span>
-        <span class="pill dark p12">Brand Identity</span>
-      </div>
+      
 
-      <!-- Bottom marquee -->
-      <div class="marquee">
-        <div class="marquee-track">
-          <div class="marquee-content">
-            <span>Web Design</span> ✳ <span>App Design</span> ✳
-            <span>Dashboard</span> ✳ <span>Wireframe</span> ✳
-            <span>Web Design</span> ✳ <span>App Design</span> ✳
-            <span>Dashboard</span>
-          </div>
 
-          <!-- duplicate for infinite loop -->
-          <div class="marquee-content">
-            <span>Web Design</span> ✳ <span>App Design</span> ✳
-            <span>Dashboard</span> ✳ <span>Wireframe</span> ✳
-            <span>Web Design</span> ✳ <span>App Design</span> ✳
-            <span>Dashboard</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- marqueee section end -->
-
-    <!-- Start Service Section -->
-    <section id="service">
       <div class="cs-height_150 cs-height_lg_80"></div>
-      <div class="container">
-        <div class="row">
-          <div class="col-xl-4">
-            <div class="cs-section_heading cs-style1">
-              <h3 class="cs-section_subtitle">What Can We Do</h3>
-              <h2 class="cs-section_title">Our Services</h2>
-              <div class="cs-height_45 cs-height_lg_20"></div>
-              <a
-                href="service.html"
-                class="cs-text_btn wow fadeInLeft"
-                data-wow-duration="0.8s"
-                data-wow-delay="0.2s"
-              >
-                <span>See All Services</span>
-                <svg
-                  width="26"
-                  height="12"
-                  viewBox="0 0 26 12"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M25.5303 6.53033C25.8232 6.23744 25.8232 5.76256 25.5303 5.46967L20.7574 0.696699C20.4645 0.403806 19.9896 0.403806 19.6967 0.696699C19.4038 0.989593 19.4038 1.46447 19.6967 1.75736L23.9393 6L19.6967 10.2426C19.4038 10.5355 19.4038 11.0104 19.6967 11.3033C19.9896 11.5962 20.4645 11.5962 20.7574 11.3033L25.5303 6.53033ZM0 6.75H25V5.25H0V6.75Z"
-                    fill="currentColor"
-                  ></path>
-                </svg>
-              </a>
-            </div>
-            <div class="cs-height_90 cs-height_lg_45"></div>
-          </div>
-
-          <!-- cards starts  -->
-          <!-- <div class="col-xl-8">
-            <div class="row">
-              <div class="col-lg-3 col-sm-6 cs-hidden_mobile">
-                <div>
-                  <h6>
-                    Web Designing
-                  </h6>
-                  <p>Websites that
-                    don’t just look good, they make competitors nervous.</p>
-                </div>
-              </div>
-              <div class="col-lg-3 col-sm-6">
-                <div class="cs-hobble">
-                  <a
-                    href="service.html"
-                    class="cs-card cs-style1 cs-hover_layer1"
-                  >
-                    <img src="assets/img/service_1.jpeg" alt="Service" />
-                    <div class="cs-card_overlay"></div>
-                    <div class="cs-card_info">
-                      <span class="cs-hover_layer3 cs-accent_bg"></span>
-                      <h2 class="cs-card_title">UI/UX design</h2>
-                    </div>
-                  </a>
-                </div>
-                <div class="cs-height_0 cs-height_lg_30"></div>
-              </div>
-              <div class="col-lg-3 col-sm-6 cs-hidden_mobile"></div>
-              <div class="col-lg-3 col-sm-6">
-                <div class="cs-hobble">
-                  <a
-                    href="service.html"
-                    class="cs-card cs-style1 cs-hover_layer1"
-                  >
-                    <img src="assets/img/service_2.jpeg" alt="Service" />
-                    <div class="cs-card_overlay"></div>
-                    <div class="cs-card_info">
-                      <span class="cs-hover_layer3 cs-accent_bg"></span>
-                      <h2 class="cs-card_title">Digital Marketing</h2>
-                    </div>
-                  </a>
-                </div>
-                <div class="cs-height_0 cs-height_lg_30"></div>
-              </div>
-              <div class="col-lg-3 col-sm-6">
-                <div class="cs-hobble">
-                  <a
-                    href="service.html"
-                    class="cs-card cs-style1 cs-hover_layer1"
-                  >
-                    <img src="assets/img/service_3.jpeg" alt="Service" />
-                    <div class="cs-card_overlay"></div>
-                    <div class="cs-card_info">
-                      <span class="cs-hover_layer3 cs-accent_bg"></span>
-                      <h2 class="cs-card_title">Ecommerce Store</h2>
-                    </div>
-                  </a>
-                </div>
-                <div class="cs-height_0 cs-height_lg_30"></div>
-              </div>
-              <div class="col-lg-3 col-sm-6 cs-hidden_mobile"></div>
-              <div class="col-lg-3 col-sm-6">
-                <div class="cs-hobble">
-                  <a
-                    href="service.html"
-                    class="cs-card cs-style1 cs-hover_layer1"
-                  >
-                    <img src="assets/img/service_4.jpeg" alt="Service" />
-                    <div class="cs-card_overlay"></div>
-                    <div class="cs-card_info">
-                      <span class="cs-hover_layer3 cs-accent_bg"></span>
-                      <h2 class="cs-card_title">Web Development</h2>
-                    </div>
-                  </a>
-                </div>
-                <div class="cs-height_0 cs-height_lg_30"></div>
-              </div>
-              <div class="col-lg-3 col-sm-6 cs-hidden_mobile"></div>
-            </div>
-          </div> -->
-
-          <div class="row cs-row_gap_30">
-            <div class="col-lg-4 col-md-6 col-sm-12">
-              <div class="cs-service_card">
-                <div class="cs-service_icon">
-                  <img src="assets/img/web.svg" alt="Web Designing" />
-                </div>
-                <h3 class="cs-service_title">Web Designing</h3>
-                <p class="cs-service_desc">
-                  Websites that don’t just look good, they make competitors
-                  nervous.
-                </p>
-                <a href="service.html" class="cs-card_arrow_btn">
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <line x1="7" y1="17" x2="17" y2="7"></line>
-                    <polyline points="7 7 17 7 17 17"></polyline>
-                  </svg>
-                </a>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 col-sm-12">
-              <div class="cs-service_card">
-                <div class="cs-service_icon">
-                  <img src="assets/img/marketing.svg" alt="Digital Marketing" />
-                </div>
-                <h3 class="cs-service_title">Digital Marketing</h3>
-                <p class="cs-service_desc">
-                  From zero to viral, we make brands unmissable online.
-                </p>
-                <a href="service.html" class="cs-card_arrow_btn">
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <line x1="7" y1="17" x2="17" y2="7"></line>
-                    <polyline points="7 7 17 7 17 17"></polyline>
-                  </svg>
-                </a>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 col-sm-12">
-              <div class="cs-service_card">
-                <div class="cs-service_icon">
-                  <img src="assets/img/branding.svg" alt="Branding" />
-                </div>
-                <h3 class="cs-service_title">Branding</h3>
-                <p class="cs-service_desc">
-                  Creating brands that live rent-free in your audience’s mind.
-                </p>
-                <a href="service.html" class="cs-card_arrow_btn">
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <line x1="7" y1="17" x2="17" y2="7"></line>
-                    <polyline points="7 7 17 7 17 17"></polyline>
-                  </svg>
-                </a>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 col-sm-12">
-              <div class="cs-service_card">
-                <div class="cs-service_icon">
-                  <img src="assets/img/email.svg" alt="Email Marketing" />
-                </div>
-                <h3 class="cs-service_title">Email Marketing</h3>
-                <p class="cs-service_desc">
-                  Sliding into inboxes with messages that actually get clicked.
-                </p>
-                <a href="service.html" class="cs-card_arrow_btn">
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <line x1="7" y1="17" x2="17" y2="7"></line>
-                    <polyline points="7 7 17 7 17 17"></polyline>
-                  </svg>
-                </a>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 col-sm-12">
-              <div class="cs-service_card">
-                <div class="cs-service_icon">
-                  <img src="assets/img/ppc.svg" alt="PPC" />
-                </div>
-                <h3 class="cs-service_title">Pay Per Click</h3>
-                <p class="cs-service_desc">
-                  Every click counts, and we make sure it pays.
-                </p>
-                <a href="service.html" class="cs-card_arrow_btn">
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <line x1="7" y1="17" x2="17" y2="7"></line>
-                    <polyline points="7 7 17 7 17 17"></polyline>
-                  </svg>
-                </a>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 col-sm-12">
-              <div class="cs-service_card">
-                <div class="cs-service_icon">
-                  <img src="assets/img/logo.svg" alt="Logo Designing" />
-                </div>
-                <h3 class="cs-service_title">Logo Designing</h3>
-                <p class="cs-service_desc">
-                  Your brand’s first impression, designed to leave a dent.
-                </p>
-                <a href="service.html" class="cs-card_arrow_btn">
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <line x1="7" y1="17" x2="17" y2="7"></line>
-                    <polyline points="7 7 17 7 17 17"></polyline>
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- cards end -->
-        </div>
-      </div>
-      <div class="cs-height_150 cs-height_lg_50"></div>
-    </section>
-    <!-- End Service Section -->
-    <!-- Start Latest Project -->
-    <div class="container">
-      <h2
-        class="cs-font_50 cs-m0 text-center cs-line_height_4 wow fadeInUp"
-        data-wow-duration="0.8s"
-        data-wow-delay="0.2s"
-      >
-        Explore our recent project.
-      </h2>
-    </div>
-    <div class="cs-height_70 cs-height_lg_70"></div>
-    <section>
-      <div class="cs-slider cs-style2 cs-gap-12">
-        <div
-          class="cs-slider_container"
-          data-autoplay="1"
-          data-loop="1"
-          data-speed="200"
-          data-center="0"
-          data-slides-per-view="responsive"
-          data-xs-slides="1"
-          data-sm-slides="2"
-          data-md-slides="3"
-          data-lg-slides="4"
-          data-add-slides="4"
-        >
-          <div class="cs-slider_wrapper">
-            <div class="cs-slide">
-              <a
-                href="https://margdarshan-vidyapeeth.netlify.app/"
-                target="_blank"
-                class="cs-portfolio cs-style1 cs-type2 cs-size3"
-              >
-                <div class="cs-portfolio_hover"></div>
-                <div
-                  class="cs-portfolio_bg cs-bg"
-                  data-src="assets/img/pro_1.png"
-                ></div>
-                <div class="cs-portfolio_info">
-                  <div class="cs-portfolio_info_bg cs-accent_bg"></div>
-                  <h2 class="cs-portfolio_title">Business Websites</h2>
-                  <div class="cs-portfolio_subtitle">See Details</div>
-                </div>
-              </a>
-            </div>
-            <!-- .cs-slide -->
-            <div class="cs-slide">
-              <a
-                href="https://an-work.netlify.app/"
-                target="_blank"
-                class="cs-portfolio cs-style1 cs-type2 cs-size3"
-              >
-                <div class="cs-portfolio_hover"></div>
-                <div
-                  class="cs-portfolio_bg cs-bg"
-                  data-src="assets/img/pro_2.png"
-                ></div>
-                <div class="cs-portfolio_info">
-                  <div class="cs-portfolio_info_bg cs-accent_bg"></div>
-                  <h2 class="cs-portfolio_title">Ecommerce Site</h2>
-                  <div class="cs-portfolio_subtitle">See Details</div>
-                </div>
-              </a>
-            </div>
-            <!-- .cs-slide -->
-            <div class="cs-slide">
-              <a
-                href="https://antravels.netlify.app/"
-                target="_blank"
-                class="cs-portfolio cs-style1 cs-type2 cs-size3"
-              >
-                <div class="cs-portfolio_hover"></div>
-                <div
-                  class="cs-portfolio_bg cs-bg"
-                  data-src="assets/img/pro_3.png"
-                ></div>
-                <div class="cs-portfolio_info">
-                  <div class="cs-portfolio_info_bg cs-accent_bg"></div>
-                  <h2 class="cs-portfolio_title">Blogging Sites</h2>
-                  <div class="cs-portfolio_subtitle">See Details</div>
-                </div>
-              </a>
-            </div>
-            <div class="cs-slide">
-              <a
-                href="https://antravels.netlify.app/"
-                target="_blank"
-                class="cs-portfolio cs-style1 cs-type2 cs-size3"
-              >
-                <div class="cs-portfolio_hover"></div>
-                <div
-                  class="cs-portfolio_bg cs-bg"
-                  data-src="assets/img/pro_3.png"
-                ></div>
-                <div class="cs-portfolio_info">
-                  <div class="cs-portfolio_info_bg cs-accent_bg"></div>
-                  <h2 class="cs-portfolio_title">Blogging Sites</h2>
-                  <div class="cs-portfolio_subtitle">See Details</div>
-                </div>
-              </a>
-            </div>
-            <div class="cs-slide">
-              <a
-                href="https://antravels.netlify.app/"
-                target="_blank"
-                class="cs-portfolio cs-style1 cs-type2 cs-size3"
-              >
-                <div class="cs-portfolio_hover"></div>
-                <div
-                  class="cs-portfolio_bg cs-bg"
-                  data-src="assets/img/pro_3.png"
-                ></div>
-                <div class="cs-portfolio_info">
-                  <div class="cs-portfolio_info_bg cs-accent_bg"></div>
-                  <h2 class="cs-portfolio_title">Blogging Sites</h2>
-                  <div class="cs-portfolio_subtitle">See Details</div>
-                </div>
-              </a>
-            </div>
-            <div class="cs-slide">
-              <a
-                href="https://antravels.netlify.app/"
-                target="_blank"
-                class="cs-portfolio cs-style1 cs-type2 cs-size3"
-              >
-                <div class="cs-portfolio_hover"></div>
-                <div
-                  class="cs-portfolio_bg cs-bg"
-                  data-src="assets/img/pro_3.png"
-                ></div>
-                <div class="cs-portfolio_info">
-                  <div class="cs-portfolio_info_bg cs-accent_bg"></div>
-                  <h2 class="cs-portfolio_title">Blogging Sites</h2>
-                  <div class="cs-portfolio_subtitle">See Details</div>
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-        <!-- .cs-slider_container -->
-        <div class="cs-pagination cs-style1 cs-hidden_desktop"></div>
-        <div class="cs-slider_arrows cs-style2 cs-primary_color">
-          <div class="cs-left_arrow cs-center">
-            <svg
-              width="26"
-              height="13"
-              viewBox="0 0 26 13"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M0.469791 5.96967C0.176899 6.26256 0.176899 6.73744 0.469791 7.03033L5.24276 11.8033C5.53566 12.0962 6.01053 12.0962 6.30342 11.8033C6.59632 11.5104 6.59632 11.0355 6.30342 10.7426L2.06078 6.5L6.30342 2.25736C6.59632 1.96447 6.59632 1.48959 6.30342 1.1967C6.01053 0.903806 5.53566 0.903806 5.24276 1.1967L0.469791 5.96967ZM26.0001 5.75L1.00012 5.75V7.25L26.0001 7.25V5.75Z"
-                fill="currentColor"
-              />
-            </svg>
-          </div>
-          <div class="cs-right_arrow cs-center">
-            <svg
-              width="26"
-              height="13"
-              viewBox="0 0 26 13"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M25.5305 7.03033C25.8233 6.73744 25.8233 6.26256 25.5305 5.96967L20.7575 1.1967C20.4646 0.903806 19.9897 0.903806 19.6968 1.1967C19.4039 1.48959 19.4039 1.96447 19.6968 2.25736L23.9395 6.5L19.6968 10.7426C19.4039 11.0355 19.4039 11.5104 19.6968 11.8033C19.9897 12.0962 20.4646 12.0962 20.7575 11.8033L25.5305 7.03033ZM0.00012207 7.25H25.0001V5.75H0.00012207V7.25Z"
-                fill="currentColor"
-              />
-            </svg>
-          </div>
-        </div>
-      </div>
-      <!-- .cs-slider -->
-    </section>
-    <!-- <div class="cs-height_50"></div> -->
-
-    <!-- End Latest Project -->
-    <!-- <div class="cs-height_150 cs-height_lg_80"></div> -->
-
-    <!-- Start General Text -->
-
-    
-    <!-- timeline section start -->
-
-    <section class="sw-timeline-wrap">
+      <section class="sw-timeline-wrap">
       <div class="sw-timeline-grid">
         <!-- LEFT CONTENT -->
         <div class="sw-info-panel sw-sticky">
@@ -1155,10 +620,11 @@
         </div>
       </div>
     </section>
+      <div class="cs-height_150 cs-height_lg_80"></div>
 
-    <!-- timeline section end -->
 
-    <section>
+
+      <section>
       <div class="container">
         <div class="cs-section_heading cs-style1 text-center">
           <h3 class="cs-section_subtitle cs-accent_color"></h3>
@@ -1294,256 +760,285 @@
       </div>
       <div class="cs-height_130 cs-height_lg_80"></div>
     </section>
+      <!-- testimonila section end -->
 
-    <!-- End Testimonial Section -->
 
-    <!-- carousal container start -->
+      
 
-    <!-- carousal container end  -->
 
-    <!-- Start Blog Section -->
+      <!-- timeline section start -->
+      <section class="faq-section">
+        <div class="faq-container">
+          <span class="faq-pill">FAQs</span>
 
-    <section class="cs-shape_wrap_4 cs-parallax">
-      <div class="cs-shape_4 cs-to_up"></div>
-      <div class="cs-shape_4 cs-to_right"></div>
-      <div class="cs-height_150 cs-height_lg_80"></div>
-      <div class="container">
-        <div class="cs-slider cs-style1 cs-gap-24">
-          <div class="cs-slider_left">
-            <div class="cs-section_heading cs-style1">
-              <h3 class="cs-section_subtitle">Our Blog</h3>
-              <h2 class="cs-section_title">Explore Recent Publication</h2>
-              <div class="cs-height_45 cs-height_lg_20"></div>
-              <a
-                href="blog.html"
-                class="cs-text_btn wow fadeInLeft"
-                data-wow-duration="0.8s"
-                data-wow-delay="0.2s"
-              >
-                <span>View More Blog</span>
-                <svg
-                  width="26"
-                  height="12"
-                  viewBox="0 0 26 12"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M25.5303 6.53033C25.8232 6.23744 25.8232 5.76256 25.5303 5.46967L20.7574 0.696699C20.4645 0.403806 19.9896 0.403806 19.6967 0.696699C19.4038 0.989593 19.4038 1.46447 19.6967 1.75736L23.9393 6L19.6967 10.2426C19.4038 10.5355 19.4038 11.0104 19.6967 11.3033C19.9896 11.5962 20.4645 11.5962 20.7574 11.3033L25.5303 6.53033ZM0 6.75H25V5.25H0V6.75Z"
-                    fill="currentColor"
-                  ></path>
-                </svg>
-              </a>
-            </div>
-          </div>
-          <div class="cs-slider_right">
-            <div class="cs-post_wrap">
-              <div
-                class="cs-slider_container"
-                data-autoplay="1"
-                data-loop="1"
-                data-speed="1000"
-                data-center="0"
-                data-variable-width="1"
-                data-slides-per-view="responsive"
-                data-xs-slides="1"
-                data-sm-slides="2"
-                data-md-slides="2"
-                data-lg-slides="2"
-                data-add-slides="3"
-              >
-                <div class="cs-slider_wrapper">
-                  <div class="cs-slide">
-                    <div class="cs-post cs-style1">
-                      <a href="blog-details.html" class="cs-post_thumb">
-                        <img src="assets/img/post_1.jpeg" alt="Post" />
-                        <div class="cs-post_overlay"></div>
-                      </a>
-                      <div class="cs-post_info">
-                        <div class="cs-posted_by">07 Mar 2022</div>
-                        <h2 class="cs-post_title">
-                          <a href="blog-details.html"
-                            >How to keep fear from ruining your art business
-                            with confident</a
-                          >
-                        </h2>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- .cs-slide -->
-                  <div class="cs-slide">
-                    <div class="cs-post cs-style1">
-                      <a href="blog-details.html" class="cs-post_thumb">
-                        <img src="assets/img/post_2.jpeg" alt="Post" />
-                        <div class="cs-post_overlay"></div>
-                      </a>
-                      <div class="cs-post_info">
-                        <div class="cs-posted_by">10 Feb 2022</div>
-                        <h2 class="cs-post_title">
-                          <a href="blog-details.html"
-                            >Artistic mind will be great for creation
-                            anything</a
-                          >
-                        </h2>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- .cs-slide -->
-                  <div class="cs-slide">
-                    <div class="cs-post cs-style1">
-                      <a href="blog-details.html" class="cs-post_thumb">
-                        <img src="assets/img/post_3.jpeg" alt="Post" />
-                        <div class="cs-post_overlay"></div>
-                      </a>
-                      <div class="cs-post_info">
-                        <div class="cs-posted_by">05 Apr 2022</div>
-                        <h2 class="cs-post_title">
-                          <a href="blog-details.html"
-                            >A.I will take over all job for human within next
-                            year</a
-                          >
-                        </h2>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- .cs-slide -->
-                  <div class="cs-slide">
-                    <div class="cs-post cs-style1">
-                      <a href="blog-details.html" class="cs-post_thumb">
-                        <img src="assets/img/post_1.jpeg" alt="Post" />
-                        <div class="cs-post_overlay"></div>
-                      </a>
-                      <div class="cs-post_info">
-                        <div class="cs-posted_by">07 Mar 2022</div>
-                        <h2 class="cs-post_title">
-                          <a href="blog-details.html"
-                            >How to keep fear from ruining your art business
-                            with confident</a
-                          >
-                        </h2>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- .cs-slide -->
-                  <div class="cs-slide">
-                    <div class="cs-post cs-style1">
-                      <a href="blog-details.html" class="cs-post_thumb">
-                        <img src="assets/img/post_2.jpeg" alt="Post" />
-                        <div class="cs-post_overlay"></div>
-                      </a>
-                      <div class="cs-post_info">
-                        <div class="cs-posted_by">10 Feb 2022</div>
-                        <h2 class="cs-post_title">
-                          <a href="blog-details.html"
-                            >Artistic mind will be great for creation
-                            anything</a
-                          >
-                        </h2>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- .cs-slide -->
-                  <div class="cs-slide">
-                    <div class="cs-post cs-style1">
-                      <a href="blog-details.html" class="cs-post_thumb">
-                        <img src="assets/img/post_3.jpeg" alt="Post" />
-                        <div class="cs-post_overlay"></div>
-                      </a>
-                      <div class="cs-post_info">
-                        <div class="cs-posted_by">05 Apr 2022</div>
-                        <h2 class="cs-post_title">
-                          <a href="blog-details.html"
-                            >A.I will take over all job for human within next
-                            year</a
-                          >
-                        </h2>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- .cs-slide -->
-                </div>
+          <h2 class="faq-heading">
+            Got SEO Questions? <span>We’ve Got Straight Answers</span>
+          </h2>
+
+          <div class="faq-list">
+            <!-- FAQ ITEM -->
+            <div class="faq-item">
+              <button class="faq-question">
+                What exactly is included in your branding service?
+                <span class="icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Our branding services cover everything from strategy, naming,
+                  and visual identity to logo design, brand guidelines, and
+                  packaging. Whether you’re building a new brand or refreshing
+                  an old one, we handle it all.
+                </p>
               </div>
-              <!-- .cs-slider_container -->
-              <div class="cs-pagination cs-style1 cs-hidden_desktop"></div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question">
+                Do I really need a brand strategy, or is a logo enough?
+                <span class="icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  A logo without strategy is just decoration. A solid brand
+                  strategy ensures that every visual and verbal element reflects
+                  your values, goals, and audience.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question">
+                Can you help me rename my business or product?
+                <span class="icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Yes, we offer brand naming services that are creative,
+                  strategic, and legally safe. We help you find a name that
+                  sticks and supports your brand vision.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question">
+                What if I already have a logo but want a full brand identity?
+                <span class="icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  No problem. We can build a complete identity system around
+                  your existing logo or refine it if needed — including fonts,
+                  colors, and design guidelines.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question">
+                Do you offer rebranding services?
+                <span class="icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Absolutely. Whether you're repositioning your business or
+                  undergoing a major shift, we guide you through a smooth and
+                  strategic rebrand.
+                </p>
+              </div>
             </div>
           </div>
         </div>
-        <!-- .cs-slider -->
-      </div>
-      <div class="cs-height_125 cs-height_lg_70"></div>
+      </section>
+
+      <!-- timeline section end -->
     </section>
-    <!-- End Blog Section -->
-    <!-- End Moving Text -->
-    <div class="cs-moving_text_wrap cs-bold cs-primary_font">
-      <div class="cs-moving_text_in">
-        <div class="cs-moving_text">Our Reputed World Wide Partners</div>
-        <div class="cs-moving_text">Our Reputed World wide Partners</div>
+
+    <main class="stack-section" id="stackSection">
+      <!-- Scroll Hint -->
+      <div class="stack-section-background">
+        <div class="stack-section-heading">
+          <h2>A Showcase of Strategy, Design, and Technology at Work</h2>
+          <div class="stack-section-heading">
+            <p>
+              Explore how our digital solutions have helped brands transform
+              challenges into impactful outcomes across web, mobile, and cloud
+              platforms.
+            </p>
+          </div>
+        </div>
+        <!-- Card Wrappers -->
+
+        <div class="stack-item" data-index="0">
+          <div class="portfolio-card">
+            <!-- TOP IMAGE SECTION -->
+            <div class="portfolio-top">
+              <img
+                src="./assets/img/JindalSteel.webp"
+                alt="Project preview"
+                class="portfolio-bg-image"
+              />
+
+              <!-- overlay content -->
+              <div class="portfolio-overlay">
+                <div class="portfolio-tags">
+                  <span>Real Estate Portal</span>
+                  <span>Property Management</span>
+                  <span>Advanced Search</span>
+                </div>
+
+                <button class="portfolio-arrow">↗</button>
+              </div>
+            </div>
+
+            <!-- BOTTOM CONTENT -->
+            <div class="portfolio-bottom">
+              <h3>
+                Built a Revamped Digital Presence<br />
+                for Rusan Healthcare
+              </h3>
+
+              <p>
+                Developed a comprehensive real estate platform with advanced
+                search capabilities, virtual tours, and seamless property
+                management tools that transformed how users discover and
+                interact with properties.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="stack-item" data-index="1">
+          <div class="portfolio-card">
+            <!-- TOP IMAGE SECTION -->
+            <div class="portfolio-top">
+              <img
+                src="./assets/img/Praeferre.webp"
+                alt="Project preview"
+                class="portfolio-bg-image"
+              />
+
+              <!-- overlay content -->
+              <div class="portfolio-overlay">
+                <div class="portfolio-tags">
+                  <span>Real Estate Portal</span>
+                  <span>Property Management</span>
+                  <span>Advanced Search</span>
+                </div>
+
+                <button class="portfolio-arrow">↗</button>
+              </div>
+            </div>
+
+            <!-- BOTTOM CONTENT -->
+            <div class="portfolio-bottom">
+              <h3>
+                Built a Revamped Digital Presence<br />
+                for Rusan Healthcare
+              </h3>
+
+              <p>
+                Developed a comprehensive real estate platform with advanced
+                search capabilities, virtual tours, and seamless property
+                management tools that transformed how users discover and
+                interact with properties.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="stack-item" data-index="2">
+          <div class="portfolio-card">
+            <!-- TOP IMAGE SECTION -->
+            <div class="portfolio-top">
+              <img
+                src="./assets/img/Rusan.webp"
+                alt="Project preview"
+                class="portfolio-bg-image"
+              />
+
+              <!-- overlay content -->
+              <div class="portfolio-overlay">
+                <div class="portfolio-tags">
+                  <span>Real Estate Portal</span>
+                  <span>Property Management</span>
+                  <span>Advanced Search</span>
+                </div>
+
+                <button class="portfolio-arrow">↗</button>
+              </div>
+            </div>
+
+            <!-- BOTTOM CONTENT -->
+            <div class="portfolio-bottom">
+              <h3>
+                Built a Revamped Digital Presence<br />
+                for Rusan Healthcare
+              </h3>
+
+              <p>
+                Developed a comprehensive real estate platform with advanced
+                search capabilities, virtual tours, and seamless property
+                management tools that transformed how users discover and
+                interact with properties.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-    <!-- <div class="cs-height_100 cs-height_lg_70"></div> -->
-    <!-- Start Partner Logo -->
-    <!-- <div class="container">
-      <div class="cs-partner_logo_wrap">
-        <div class="cs-partner_logo">
-          <img src="assets/img/partner_1.svg" alt="Partner" />
-        </div>
-        <div class="cs-partner_logo">
-          <img src="assets/img/partner_2.svg" alt="Partner" />
-        </div>
-        <div class="cs-partner_logo">
-          <img src="assets/img/partner_3.svg" alt="Partner" />
-        </div>
-        <div class="cs-partner_logo">
-          <img src="assets/img/partner_4.svg" alt="Partner" />
-        </div>
-        <div class="cs-partner_logo">
-          <img src="assets/img/partner_5.svg" alt="Partner" />
-        </div>
-      </div>
-    </div> -->
-    <!-- End Partner Logo -->
-    <div class="cs-height_130 cs-height_lg_70"></div>
-    <!-- Start CTA -->
-    <section>
+    </main>
+
+    <section class="why-us">
       <div class="container">
-        <div
-          class="cs-cta cs-style1 cs-bg text-center cs-shape_wrap_1 cs-position_1"
-          data-src="assets/img/cta_bg.jpeg"
-        >
-          <div class="cs-shape_1"></div>
-          <div class="cs-shape_1"></div>
-          <div class="cs-shape_1"></div>
-          <div class="cs-cta_in">
-            <h2 class="cs-cta_title cs-semi_bold cs-m0">
-              Let’s Discuss Make <br />Something <i>Cool</i> Together
-            </h2>
-            <div class="cs-height_70 cs-height_lg_30"></div>
-            <a
-              href="contact.html"
-              class="cs-text_btn wow fadeInUp"
-              data-wow-duration="0.8s"
-              data-wow-delay="0.2s"
-            >
-              <span>Apply For Meeting</span>
-              <svg
-                width="26"
-                height="12"
-                viewBox="0 0 26 12"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M25.5307 6.53033C25.8236 6.23744 25.8236 5.76256 25.5307 5.46967L20.7577 0.696699C20.4648 0.403806 19.99 0.403806 19.6971 0.696699C19.4042 0.989593 19.4042 1.46447 19.6971 1.75736L23.9397 6L19.6971 10.2426C19.4042 10.5355 19.4042 11.0104 19.6971 11.3033C19.99 11.5962 20.4648 11.5962 20.7577 11.3033L25.5307 6.53033ZM0.000366211 6.75H25.0004V5.25H0.000366211V6.75Z"
-                  fill="currentColor"
-                />
-              </svg>
-            </a>
+        <h2 class="heading">Why Partner with Us for SEO?</h2>
+
+        <p class="subtext">
+          We don’t just chase rankings, we build digital dominance. Our SEO
+          approach is practical, powerful, and proven. Here’s why brands trust
+          us to lead the charge:
+        </p>
+
+        <div class="card-grid">
+          <!-- Card 1 -->
+          <div class="card">
+            <div class="icon">👥</div>
+            <h3>Experts Who Actually<br />Understand SEO</h3>
+            <p>
+              Algorithms evolve. Trends shift. But our team stays ahead. With
+              years of hands-on experience, we bring real strategy not just
+              surface-level changes.
+            </p>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="card">
+            <div class="icon">🖥️</div>
+            <h3>Custom Plans, Never<br />Copy-Paste Solutions</h3>
+            <p>
+              Your business is unique. Your SEO strategy should be too. We
+              tailor everything from keyword selection to content around your
+              goals, industry, and target audience.
+            </p>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="card">
+            <div class="icon">⏱️</div>
+            <h3>Consistency That<br />Delivers Over Time</h3>
+            <p>
+              Quick hacks don’t last. We invest in long-term, ethical SEO
+              practices that build momentum and keep delivering month after
+              month.
+            </p>
           </div>
         </div>
       </div>
     </section>
-    <!-- End CTA -->
-    <!-- Start Footer -->
+
+    <!-- hero section end -->
+
+    <!-- footer start -->
+
     <footer class="cs-fooer">
       <div class="cs-fooer_main">
         <div class="container">
@@ -1685,24 +1180,24 @@
                 </ul>
               </div>
               <div class="cs-footer_item">
-              <div class="cs-newsletter cs-style1">
-                <div class="rishab">
-                  <div class="cs-newsletter_text">
-                    Subscribe to Innovate Your Future!
+                <div class="cs-newsletter cs-style1">
+                  <div class="rishab">
+                    <div class="cs-newsletter_text">
+                      Subscribe to Innovate Your Future!
+                    </div>
                   </div>
+                  <form action="#" class="cs-newsletter_form">
+                    <input
+                      type="email"
+                      class="cs-newsletter_input"
+                      placeholder="advertisyard@gmail.com "
+                    />
+                    <button class="cs-newsletter_btn">
+                      <span>Send</span>
+                    </button>
+                  </form>
                 </div>
-                <form action="#" class="cs-newsletter_form">
-                  <input
-                    type="email"
-                    class="cs-newsletter_input"
-                    placeholder="advertisyard@gmail.com "
-                  />
-                  <button class="cs-newsletter_btn">
-                    <span>Send</span>
-                  </button>
-                </form>
               </div>
-            </div>
             </div>
 
             <!-- <div class="col-lg-3 col-sm-6">
@@ -1746,7 +1241,7 @@
         </div>
       </div>
     </footer>
-    <!-- End Footer -->
+    <!-- footer end -->
 
     <span class="social_media_links">
       <div class=" ">
@@ -1784,23 +1279,7 @@
         />
       </svg>
     </span>
-    <!-- Start Video Popup -->
-    <div class="cs-video_popup">
-      <div class="cs-video_popup_overlay"></div>
-      <div class="cs-video_popup_content">
-        <div class="cs-video_popup_layer"></div>
-        <div class="cs-video_popup_container">
-          <div class="cs-video_popup_align">
-            <div class="embed-responsive embed-responsive-16by9">
-              <iframe class="embed-responsive-item" src="about:blank"></iframe>
-            </div>
-          </div>
-          <div class="cs-video_popup_close"></div>
-        </div>
-      </div>
-    </div>
-    <!-- End Video Popup -->
-    <!-- Script -->
+
     <script src="assets/js/plugin/jquery-3.6.0.min.js"></script>
     <script src="assets/js/plugin/isotope.pkg.min.js"></script>
     <script src="assets/js/plugin/jquery.slick.min.js"></script>
@@ -1810,5 +1289,31 @@
     <script src="assets/js/plugin/gsap.min.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const items = document.querySelectorAll(".faq-item");
+
+        items.forEach((item) => {
+          const btn = item.querySelector(".faq-question");
+          const icon = item.querySelector(".icon");
+
+          btn.addEventListener("click", () => {
+            // close others
+            items.forEach((i) => {
+              if (i !== item) {
+                i.classList.remove("active");
+                i.querySelector(".icon").textContent = "+";
+              }
+            });
+
+            // toggle current
+            const isOpen = item.classList.contains("active");
+            item.classList.toggle("active");
+            icon.textContent = isOpen ? "+" : "−";
+          });
+        });
+      });
+    </script>
   </body>
 </html>
