@@ -19,6 +19,10 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+
+  
+  
   </head>
   <body>
     <!-- header section start -->
@@ -457,147 +461,22 @@
 
     <!-- showcase projects start -->
 
-    <main class="stack-section" id="stackSection">
-      <!-- Scroll Hint -->
-      <div class="stack-section-background">
-        <div class="stack-section-heading">
-          <h2>Website Types We Build</h2>
-          <div class="stack-section-heading">
-            <p>
-              Not every business needs the same digital setup. We create
-              websites that match your platform, purpose, and goals whether it’s
-              a sleek landing page, a full-fledged e-commerce store, or a
-              powerful CMS.
-            </p>
-          </div>
-        </div>
-        <!-- Card Wrappers -->
-
-        <div class="stack-item" data-index="0">
-          <div class="portfolio-card">
-            <!-- TOP IMAGE SECTION -->
-            <div class="portfolio-top">
-              <img
-                src="./assets/img/JindalSteel.webp"
-                alt="Project preview"
-                class="portfolio-bg-image"
-              />
-
-              <!-- overlay content -->
-              <div class="portfolio-overlay">
-                <div class="portfolio-tags">
-                  <span>Real Estate Portal</span>
-                  <span>Property Management</span>
-                  <span>Advanced Search</span>
-                </div>
-
-                <button class="portfolio-arrow">↗</button>
-              </div>
-            </div>
-
-            <!-- BOTTOM CONTENT -->
-            <div class="portfolio-bottom">
-              <h3>WordPress Websites That Work Your Way</h3>
-
-              <p>
-                WordPress is the go-to platform when you need control,
-                flexibility, and room to grow. Whether you’re running a sleek
-                blog, a corporate site, or a creative portfolio, WordPress
-                adapts to your goals. With endless plugins, custom themes, and
-                intuitive content tools, we build websites that are both easy to
-                manage and hard to ignore. From fast-loading pages to SEO-ready
-                structures, every WordPress site we craft is optimized for
-                performance and scalability. You get a website that reflects
-                your brand, speaks to your audience, and stays future-ready.
-                Simple to update. Powerful to scale. Yours to command.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="stack-item" data-index="1">
-          <div class="portfolio-card">
-            <!-- TOP IMAGE SECTION -->
-            <div class="portfolio-top">
-              <img
-                src="./assets/img/Praeferre.webp"
-                alt="Project preview"
-                class="portfolio-bg-image"
-              />
-
-              <!-- overlay content -->
-              <div class="portfolio-overlay">
-                <div class="portfolio-tags">
-                  <span>Real Estate Portal</span>
-                  <span>Property Management</span>
-                  <span>Advanced Search</span>
-                </div>
-
-                <button class="portfolio-arrow">↗</button>
-              </div>
-            </div>
-
-            <!-- BOTTOM CONTENT -->
-            <div class="portfolio-bottom">
-              <h3>Shopify Stores That Look Sharp and Sell Hard</h3>
-
-              <p>
-                If you want to get your products online fast without sacrificing
-                style or performance, Shopify is your go-to platform. Perfect
-                for product-based businesses, Shopify brings together design and
-                sales tools in one user-friendly space. We take care of
-                everything theme customization, product setup, mobile
-                responsiveness, and app integrations so you can focus on
-                selling. Your store will not only look polished, but it will
-                also perform flawlessly across devices. Whether it’s your first
-                launch or a complete redesign, we help you turn browsers into
-                buyers. Let your brand shine and your sales grow.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="stack-item" data-index="2">
-          <div class="portfolio-card">
-            <!-- TOP IMAGE SECTION -->
-            <div class="portfolio-top">
-              <img
-                src="./assets/img/Rusan.webp"
-                alt="Project preview"
-                class="portfolio-bg-image"
-              />
-
-              <!-- overlay content -->
-              <div class="portfolio-overlay">
-                <div class="portfolio-tags">
-                  <span>Real Estate Portal</span>
-                  <span>Property Management</span>
-                  <span>Advanced Search</span>
-                </div>
-
-                <button class="portfolio-arrow">↗</button>
-              </div>
-            </div>
-
-            <!-- BOTTOM CONTENT -->
-            <div class="portfolio-bottom">
-              <h3>E-commerce Websites That Convert</h3>
-
-              <p>
-                The best way is to develop and follow a plan. Start with your
-                goals in mind and then work backwards to develop the plan. What
-                steps are required to get you to the goals? Make the plan as
-                detailed as possible. Try to visualize and then plan for, every
-                possible setback. Commit the plan to paper and then keep it with
-                you at all times. Review it regularly and ensure that every step
-                takes you closer to your Vision and Goals. If the plan doesn’t
-                support the vision then change it!
-              </p>
-            </div>
-          </div>
-        </div>
+   <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="assets/img/banner.jpg" alt="">
       </div>
-    </main>
+      <div class="swiper-slide">Slide 2</div>
+      <div class="swiper-slide">Slide 3</div>
+      <div class="swiper-slide">Slide 4</div>
+      <div class="swiper-slide">Slide 5</div>
+      <div class="swiper-slide">Slide 6</div>
+      <div class="swiper-slide">Slide 7</div>
+      <div class="swiper-slide">Slide 8</div>
+      <div class="swiper-slide">Slide 9</div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
     <!-- showcase projects end -->
 
     <section class="seoServicesSection">
@@ -1063,6 +942,11 @@
     <script src="assets/js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const items = document.querySelectorAll(".faq-item");
@@ -1087,6 +971,34 @@
           });
         });
       });
+
+
+
+
+
+var swiper = new Swiper(".mySwiper", {
+  slidesPerView: "auto",
+  centeredSlides: true,
+  spaceBetween: 30,
+  loop: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  breakpoints: {
+    0: {
+      spaceBetween: 15,
+    },
+    768: {
+      spaceBetween: 30,
+    }
+  }
+});
+
+
+
+
+
     </script>
   </body>
 </html>
