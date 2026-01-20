@@ -10297,3 +10297,20 @@ padding: 20px 0px 0px;
 
 
 /* swiper css end */
+
+/* Nikhil CSS */
+#typing {
+color: #fa4f20;
+font-weight: 800;
+
+}
+
+.cursor {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+
