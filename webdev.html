@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html class="no-js" lang="en">
   <head>
     <!-- Meta Tags -->
@@ -16,13 +16,14 @@
     <link rel="stylesheet" href="assets/css/plugin/lightgallery.min.css" />
     <link rel="stylesheet" href="assets/css/plugin/animate.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/swipercss.css" />
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
-
-  
-  
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
   </head>
   <body>
     <!-- header section start -->
@@ -41,11 +42,12 @@
             <div class="cs-main_header_center">
               <div class="cs-nav cs-primary_font cs-medium">
                 <ul class="cs-nav_list">
-                 
                   <li>
                     <a href="webdev.html">Website Development</a>
                     <ul class="dropdown-menu">
-                      <li><a href="webdev.html">WordPress Website Development</a></li>
+                      <li>
+                        <a href="webdev.html">WordPress Website Development</a>
+                      </li>
                       <li><a href="#">Shopify Website Development</a></li>
                       <li><a href="#">Ecommerce Website Development</a></li>
                       <li><a href="#">Landing Page Development</a></li>
@@ -104,7 +106,6 @@
       </div>
     </header>
 
-    
     <div class="cs-side_header menu_mobile" id="sideMenu">
       <div class="cs-side_header_overlay" id="menuOverlay"></div>
 
@@ -118,7 +119,8 @@
         <ul class="cs-side_nav">
           <li>
             <a href="index.html">Home</a>
-          </li><hr>
+          </li>
+          <hr />
 
           <li class="menu-item">
             <button class="menu-btn">Website Development</button>
@@ -129,7 +131,7 @@
               <li><a href="#">Landing Page Development</a></li>
             </ul>
           </li>
-          <hr>
+          <hr />
 
           <li class="menu-item">
             <button class="menu-btn">Digital Marketing</button>
@@ -138,7 +140,8 @@
               <li><a href="ppc.html">PPC</a></li>
               <li><a href="#">Social Media Marketing</a></li>
             </ul>
-          </li><hr>
+          </li>
+          <hr />
 
           <li class="menu-item">
             <button class="menu-btn">Branding</button>
@@ -147,14 +150,13 @@
               <li><a href="#">Logo Designing</a></li>
               <li><a href="#">Rebranding</a></li>
             </ul>
-          </li><hr>
+          </li>
+          <hr />
 
           <li>
             <a href="contact.html">Contact</a>
           </li>
         </ul>
-
-        
 
         <div class="cs-side_header_box">
           <h3 class="cs-side_header_title cs-primary_color">Contact Us</h3>
@@ -195,7 +197,6 @@
             </li>
           </ul>
         </div>
-
 
         <div class="cs-side_header_box">
           <div class="cs-social_btns cs-style1">
@@ -256,9 +257,7 @@
               </svg>
             </a>
           </div>
-        </div>        
-
-        
+        </div>
       </div>
     </div>
 
@@ -399,17 +398,7 @@
     <!-- hero section start -->
     <section class="seoHeroSection">
       <!-- BACKGROUND VIDEO -->
-      <video
-        class="seoHeroVideo"
-        autoplay
-        muted
-        loop
-        playsinline
-        poster="assets/hero-poster.jpg"
-      >
-        <source src="assets/video/background_video.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+      <img class="seoHeroVideo" src="assets/img/background_img.png" alt="" />
 
       <!-- OVERLAY -->
       <div class="seoHeroOverlay">
@@ -461,22 +450,29 @@
 
     <!-- showcase projects start -->
 
-   <div class="swiper mySwiper">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <img src="assets/img/banner.jpg" alt="">
-      </div>
-      <div class="swiper-slide">Slide 2</div>
-      <div class="swiper-slide">Slide 3</div>
-      <div class="swiper-slide">Slide 4</div>
-      <div class="swiper-slide">Slide 5</div>
-      <div class="swiper-slide">Slide 6</div>
-      <div class="swiper-slide">Slide 7</div>
-      <div class="swiper-slide">Slide 8</div>
-      <div class="swiper-slide">Slide 9</div>
+    <div class="swiper mySwiper">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">
+      <img src="assets/img/banner.jpg" alt="" />
     </div>
-    <div class="swiper-pagination"></div>
+    <div class="swiper-slide">
+      <img src="assets/img/banner.jpg" alt="" />
+    </div>
+    <div class="swiper-slide">
+      <img src="assets/img/banner.jpg" alt="" />
+    </div>
+    <div class="swiper-slide">
+      <img src="assets/img/banner.jpg" alt="" />
+    </div>
+    <div class="swiper-slide">
+      <img src="assets/img/banner.jpg" alt="" />
+    </div>
   </div>
+
+  <div class="swiper-pagination"></div>
+</div>
+
+
     <!-- showcase projects end -->
 
     <section class="seoServicesSection">
@@ -634,8 +630,6 @@
         </div>
       </div>
     </section>
-
-    
 
     <!-- timeline section end -->
 
@@ -942,10 +936,7 @@
     <script src="assets/js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-
-
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-
 
     <script>
       document.addEventListener("DOMContentLoaded", function () {
@@ -972,33 +963,24 @@
         });
       });
 
-
-
-
-
-var swiper = new Swiper(".mySwiper", {
-  slidesPerView: "auto",
-  centeredSlides: true,
-  spaceBetween: 30,
-  loop: true,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  breakpoints: {
-    0: {
-      spaceBetween: 15,
-    },
-    768: {
-      spaceBetween: 30,
-    }
-  }
-});
-
-
-
-
-
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: "auto",
+        centeredSlides: true,
+        spaceBetween: 30,
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+          0: {
+            spaceBetween: 15,
+          },
+          768: {
+            spaceBetween: 30,
+          },
+        },
+      });
     </script>
   </body>
 </html>
